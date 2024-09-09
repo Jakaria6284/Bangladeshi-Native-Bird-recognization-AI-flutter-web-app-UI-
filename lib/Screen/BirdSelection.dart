@@ -13,7 +13,7 @@ class BirdSelection extends StatefulWidget {
 class _BirdSelectionState extends State<BirdSelection> {
   Uint8List? selectedImageBytes; // Use Uint8List to store image bytes
   final ScrollController _scrollController = ScrollController(); // Scroll controller to control scrolling
-  bool _imagesVisible = true; // Control visibility of images
+  bool _imagesVisible =false; // Control visibility of images
 
   @override
   Widget build(BuildContext context) {
@@ -194,26 +194,215 @@ class _BirdSelectionState extends State<BirdSelection> {
                 visible: _imagesVisible, // Control visibility based on button press
                 child: Column(
                   children: [
-                    Image.asset(
-                      'assets/moyna3.jpg',
-                      height: 200,
-                      width: 200,
-                      fit: BoxFit.cover,
+                    Text("Indian Pied Starling",style: GoogleFonts.roboto(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white
+                    ),),
+
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        'assets/moyna2.png',
+                        height: 600,
+                        width: 800,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    const SizedBox(height: 20,),
-                    Image.asset(
-                      'assets/moyna3.jpg',
-                      height: 200,
-                      width: 200,
-                      fit: BoxFit.cover,
+
+                    Padding(
+                      padding: EdgeInsets.only(left: 30, right: 30),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 400,
+                            height: 300,
+                            decoration: BoxDecoration(
+                              color: Color(0xA0351E4D),
+                              borderRadius: BorderRadius.circular(30),
+                              border: Border.all(
+                                color: Colors.white,
+                                style: BorderStyle.solid,
+                                width: 2,
+                              ),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(16),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Indian Pied Starling (Gracupica contra)",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  RichText(
+                                    text: TextSpan(
+                                      style: TextStyle(color: Colors.white, fontSize: 16),
+                                      children: [
+                                        TextSpan(
+                                          text: "- Common Names: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Asian Pied Starling, Pied Myna\n"),
+                                        TextSpan(
+                                          text: "- Scientific Name: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Gracupica contra\n"),
+                                        TextSpan(
+                                          text: "- Family: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Sturnidae\n"),
+                                        TextSpan(
+                                          text: "- Size: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "22–24 cm in length\n"),
+                                        TextSpan(
+                                          text: "- Color: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                            text:
+                                            "Black and white plumage with orange-red patch around eyes\n"),
+                                        TextSpan(
+                                          text: "- Beak: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Yellow with slight orange base"),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 400,
+                            height: 300,
+                            decoration: BoxDecoration(
+                              color: Color(0xA0351E4D),
+                              borderRadius: BorderRadius.circular(30),
+                              border: Border.all(
+                                color: Colors.white,
+                                style: BorderStyle.solid,
+                                width: 2,
+                              ),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(16),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  RichText(
+                                    text: TextSpan(
+                                      style: TextStyle(color: Colors.white, fontSize: 16),
+                                      children: [
+                                        TextSpan(
+                                          text: "- Habitat: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                            text:
+                                            "Open grasslands, farmlands, urban gardens\n"),
+                                        TextSpan(
+                                          text: "- Diet: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Omnivorous—feeds on insects, fruits, grains, scraps\n"),
+                                        TextSpan(
+                                          text: "- Social: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Often seen in small flocks\n"),
+                                        TextSpan(
+                                          text: "- Breeding: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Breeding season from March to August\n"),
+                                        TextSpan(
+                                          text: "- Conservation Status: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Least Concern\n"),
+                                        TextSpan(
+                                          text: "- Population: ",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        TextSpan(text: "Stable and widely distributed"),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+
                     ),
-                    const SizedBox(height: 20,),
-                    Image.asset(
-                      'assets/moyna3.jpg',
-                      height: 200,
-                      width: 200,
-                      fit: BoxFit.cover,
+                    Text("Range Map",style: GoogleFonts.roboto(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white
+                    ),),
+
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        'assets/map.png',
+                        height: 600,
+                        width: 800,
+                        fit: BoxFit.cover,
+                      ),
                     ),
+
+
+
                   ],
                 ),
               ),
