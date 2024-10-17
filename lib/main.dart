@@ -15,11 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-     debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-
-      home: MyHomePage(),
+      home: BirdSelection(),
     );
   }
 }
@@ -30,42 +28,45 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       body: Padding(
         padding: const EdgeInsets.only(left: 300),
         child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-               Lottie.asset('assets/bard.json',height: 400,fit: BoxFit.cover),
-                Text(
-                  "AI Driven Bangladeshi Bird Recognition",
-                  style: GoogleFonts.roboto(
-                    fontSize: 35,
-                    fontWeight: FontWeight.bold,
-                  )
-                ),
-                SizedBox(height: 20),
-               ElevatedButton(onPressed: (){
-                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                   return BirdSelection();
-                 }));
-               }, style: ElevatedButton.styleFrom(
-                 backgroundColor: Colors.green, // Set the background color here
-               ),child:  Padding(
-                 padding: EdgeInsets.all(8),
-                 child: Text("Lets Explore",style: GoogleFonts.roboto(
-                   fontSize: 25,
-                   color: Colors.white,
-                   fontWeight: FontWeight.bold,
-                 ),),
-               ),)
-              ],
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Lottie.asset('assets/bard.json', height: 400, fit: BoxFit.cover),
+            Text(
+              "AI Driven Bangladeshi Bird Recognition",
+              style: GoogleFonts.roboto(
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              ),
             ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return BirdSelection();
+                }));
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green, // Set the background color here
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text(
+                  "Let's Explore",
+                  style: GoogleFonts.roboto(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
-
-
-
     );
   }
 }

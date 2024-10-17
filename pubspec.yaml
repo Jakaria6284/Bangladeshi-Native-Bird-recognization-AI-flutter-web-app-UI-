@@ -16,11 +16,15 @@ dependencies:
   tflite_web: ^0.2.2
   cupertino_icons: ^1.0.2
   image: ^3.0.1
+  js: ^0.7.1
+  http: ^1.2.2
+  image_picker: ^0.8.5+3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  build_web_compilers: ^4.0.11
 
 flutter:
   uses-material-design: true
