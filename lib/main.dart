@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
 import 'package:untitled/Screen/BirdSelection.dart';
+import 'package:untitled/provider/imageProvider.dart';
 
 
 void main() {
@@ -14,10 +16,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ChangeNotifierProvider(create: (context)=>BirdViewModel(),
+    child:  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: BirdSelection(),
+    )
     );
   }
 }
